@@ -11,6 +11,12 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        App\User::create([
+            'name' => 'admin',
+            'email' => 'admin@e-commerce.com',
+            'password' => bcrypt('admin'),
+            'admin' => 1,
+            'avatar' => asset('avatars/user.jpg'),
+        ]);
     }
 }
